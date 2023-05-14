@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>QuantAI</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="QuantAI">
+    <p>QuantAI</p>
+  </a>
+  <p class="device-notification--message">QuantAI has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#0">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="QuantAI">
+            <p>Quant AI</p>
+          </a>
+          <button class="header--cta cta">Hire Us</button>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Home</span></li>
+          </ul>
+        </nav>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1>Predict<br>Stocks</h1>
+                <button class="cta">Predict
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                  <span class="btn-background"></span>
+                </button>
+                <img src="{{ url_for('static', filename='img/introduction-visual.png') }}" alt="Welcome">
+              </div>
+
+              <form method="POST" action="/demo">
+                <label for="stock-name">Stocks:</label>
+                    <input type="text" id="stock-search" placeholder="Search stocks">
+                    <div id="stock-checkboxes">
+                        
+                            <label>
+                                <input type="checkbox" name="stock-name" value="MSFT">
+                                Microsoft
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="AMZN">
+                                Amazon
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="NVDA">
+                                Nvidia
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="QQQ">
+                                Invesco
+                            </label>
+                            <!-- <label>
+                                <input type="checkbox" name="stock-name" value="JNJ">
+                                Johnson & Johnson
+                            </label> -->
+                            <label>
+                                <input type="checkbox" name="stock-name" value="GOOG">
+                                Google
+                            </label>
+                            <!-- <label>
+                                <input type="checkbox" name="stock-name" value="INTC">
+                                Intel Corporation
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="BA">
+                                Boeing Co
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="UNH">
+                                UnitedHealth Group Inc
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="JPM">
+                                JPMorgan Chase & Co
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="V">
+                                Visa Inc
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="PG">
+                                Procter & Gamble Co
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="HD">
+                                Home Depot Inc
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="CVX">
+                                Chevron Corp
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="MRK">
+                                Merck & Co Inc
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="KO">
+                                Coca-Cola Co
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="CSCO">
+                                Cisco Systems Inc
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="MCD">
+                                McDonald's Corp
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="WMT">
+                                Walmart Inc
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="CRM">
+                                Salesforce.com Inc
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="DIS">
+                                The Walt Disney Co
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="VZ">
+                                Verizon Communications Inc
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="NKE">
+                                Nike Inc
+                            </label> -->
+                            <label>
+                                <input type="checkbox" name="stock-name" value="AAPL">
+                                Apple Inc
+                            </label>
+                            <!-- <label>
+                                <input type="checkbox" name="stock-name" value="IBM">
+                                International Business Machines Corp
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="GS">
+                                Goldman Sachs Group Inc
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="HON">
+                                Honeywell International Inc
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="AXP">
+                                American Express Co
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="AMGN">
+                                Amgen, Inc.
+                            </label> -->
+                            <label>
+                                <input type="checkbox" name="stock-name" value="SPY">
+                                S&P 500
+                            </label>
+                            <label>
+                                <input type="checkbox" name="stock-name" value="^DJI">
+                                Dow Jones
+                            </label>
+
+                            <!-- <button class="cta">Predict
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                                <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                                <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                                </g>
+                                </svg>
+                                <span class="btn-background"></span>
+                            </button> -->
+                        </div>
+
+                        <label for="source-name" style="margin-top: 20px;">Sources:</label>
+                        <div id="source-checkboxes" style="margin-bottom: 10px;">
+                            <label>
+                                <input type="checkbox" name="source-name" value="Twitter">
+                                Twitter
+                            </label>
+                            <label>
+                                <input type="checkbox" name="source-name" value="Twitter">
+                                Benzinga
+                            </label>
+                            <label>
+                                <input type="checkbox" name="source-name" value="YouTube">
+                                YouTube
+                            </label>
+                            </div>
+
+
+                        <label for="time-name" style="margin-bottom: 0px; margin-top: 20px;">Time range predictions:</label>
+                        <!-- <input type="text" id="source-search" placeholder="Select the source"> -->
+                        <div id="time-checkboxes" style="margin-top: 0px; margin-bottom: 10px;">
+                            
+                                <label>
+                                    <input type="radio" name="time-name" value="3">
+                                    3 Months
+                                </label>
+                                <label>
+                                    <input type="radio" name="time-name" value="6">
+                                    6 Months
+                                </label>
+                                
+
+                                <!-- <button class="cta">Predict
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                                    </g>
+                                    </svg>
+                                    <span class="btn-background"></span>
+                                </button> -->
+                            </div>
+
+                            <!-- <label for="model-name" style="margin-bottom: 10px;">Models:</label>
+                            <div id="model-checkboxes" style="margin-top: 0px; margin-bottom: 10px;">
+                                
+                                    <label>
+                                        <input type="checkbox" name="model-name" value="Model 1">
+                                        Model 1
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="model-name" value="Model 2">
+                                        Model 2
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="model-name" value="Model 3">
+                                        Model 3
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="model-name" value="Model 4">
+                                        Model 4
+                                    </label> -->
+                                    
+    
+                                    <!-- <button class="cta">Predict
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                                        <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                                        <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                                        </g>
+                                        </svg>
+                                        <span class="btn-background"></span>
+                                    </button> -->
+                                <!-- </div> -->
+                               <div>
+                                <label for="model-name-toggle" style="margin-bottom: 10px;">Customize Model:</label>
+                            </div>
+                                <label class="switch">
+                                    <input type="checkbox" id="model-name-toggle" name="model-name-toggle">
+                                    <span class="slider"></span>
+                                </label>
+                                <div id="model-bars" style="margin-top: 0px; margin-bottom: 20px; display: visible;">
+                                    <label for="model-1">Number of LSTM Layers:</label>
+                                    <input type="range" id="model-1" name="model-1" min="2" max="100" value="6">
+                                    <span id="model-1-value">6</span><br>
+                                    
+                                    <label for="model-2">Learning Rate:</label>
+                                    <input type="range" id="model-2" name="model-2" min="0.001" max="0.1" value="0.01" step="0.001">
+                                    <span id="model-2-value">0.01</span><br>
+                                    
+                                    <label for="model-3">Early Stopping:</label>
+                                    <input type="range" id="model-3" name="model-3" min="10" max="500" value="200">
+                                    <span id="model-3-value">200</span><br>
+                                    
+                                    <label for="model-4">Number of Epochs:</label>
+                                    <input type="range" id="model-4" name="model-4" min="500" max="5000" value="2000">
+                                    <span id="model-4-value">2000</span><br>
+                                </div>
+                                
+
+                                <script>
+                                    var toggle = document.getElementById("model-name-toggle");
+                                    var checkboxes = document.getElementById("model-bars");
+                                    toggle.addEventListener("change", function() {
+                                        if (toggle.checked) {
+                                            checkboxes.style.display = "block";
+                                        } else {
+                                            checkboxes.style.display = "none";
+                                        }
+                                    });
+
+
+                                    const model1Range = document.getElementById('model-1');
+                                    const model1Value = document.getElementById('model-1-value');
+
+                                    model1Range.addEventListener('input', function() {
+                                    model1Value.textContent = model1Range.value;
+                                    });
+
+                                    const model2Range = document.getElementById('model-2');
+                                    const model2Value = document.getElementById('model-2-value');
+
+                                    model2Range.addEventListener('input', function() {
+                                    model2Value.textContent = model2Range.value;
+                                    });
+
+                                    const model3Range = document.getElementById('model-3');
+                                    const model3Value = document.getElementById('model-3-value');
+
+                                    model3Range.addEventListener('input', function() {
+                                    model3Value.textContent = model3Range.value;
+                                    });
+
+                                    const model4Range = document.getElementById('model-4');
+                                    const model4Value = document.getElementById('model-4-value');
+
+                                    model4Range.addEventListener('input', function() {
+                                    model4Value.textContent = model4Range.value;
+                                    });
+
+                                    const stockCheckboxes = document.querySelectorAll('#stock-checkboxes label');
+                                    const stockSearch = document.querySelector('#stock-search');
+
+                                    stockSearch.addEventListener('input', () => {
+                                    const searchText = stockSearch.value.toLowerCase();
+                                    stockCheckboxes.forEach((checkbox) => {
+                                        const stockName = checkbox.textContent.trim().toLowerCase();
+                                        checkbox.style.display = stockName.includes(searchText) ? 'block' : 'none';
+                                    });
+                                    });
+
+
+
+                                </script>
+
+                                <style>
+
+                                .switch {
+                                    position: relative;
+                                    display: inline-block;
+                                    width: 60px;
+                                    height: 34px;
+                                    margin-right: 10px;
+                                    margin-top: 10px;
+                                    margin-bottom: 10px;
+                                  }
+                                  
+                                  .switch input {
+                                    opacity: 0;
+                                    width: 0;
+                                    height: 0;
+                                  }
+                                  
+                                  .slider {
+                                    position: absolute;
+                                    cursor: pointer;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    background-color: #ccc;
+                                    -webkit-transition: .4s;
+                                    transition: .4s;
+                                    border-radius: 34px;
+                                  }
+                                  
+                                  .slider:before {
+                                    position: absolute;
+                                    content: "";
+                                    height: 26px;
+                                    width: 26px;
+                                    left: 4px;
+                                    bottom: 4px;
+                                    background-color: white;
+                                    -webkit-transition: .4s;
+                                    transition: .4s;
+                                    border-radius: 50%;
+                                  }
+                                  
+                                  input:checked + .slider {
+                                    background-color: #2196F3;
+                                  }
+                                  
+                                  input:focus + .slider {
+                                    box-shadow: 0 0 1px #2196F3;
+                                  }
+                                  
+                                  input:checked + .slider:before {
+                                    -webkit-transform: translateX(26px);
+                                    -ms-transform: translateX(26px);
+                                    transform: translateX(26px);
+                                  }
+                                  
+                                  .slider.round {
+                                    border-radius: 34px;
+                                  }
+                                  
+                                  .slider.round:before {
+                                    border-radius: 50%;
+                                  }
+                                  
+                                  .switch-text {
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                  }
+                                  #more-models {
+                                    display: none;
+                                  }
+                                  
+                                  input:checked ~ #more-models {
+                                    display: block;
+                                  }
+                                </style>
+
+                                  
+
+
+
+
+                        <!-- <style>
+                            #stock-checkboxes {
+                                overflow-x: auto;
+                                white-space: nowrap;
+                                margin-top: 10px;
+                                margin-bottom: 10px;
+                            }
+
+                            #stock-search {
+                                background-color: black;
+                                color: white;
+                                width: 100%;
+                                }
+
+                            #search-stock{
+                                background-color: black;
+                                color: white;
+                                width: 100%;
+                            }
+
+
+                        </style> -->
+
+                        <style>
+                            #stock-checkboxes {
+                                overflow-x: auto;
+                                white-space: nowrap;
+                                margin-top: 10px;
+                                margin-bottom: 10px;
+                                border: 1px solid #ccc;
+                                padding: 10px;
+                                max-height: 150px;
+                                overflow-y: auto;
+                            }
+                        
+                            #stock-search {
+                                background-color: black;
+                                color: #f2f2f2;
+                                border: 1px solid #ccc;
+                                border-radius: 4px;
+                                width: 100%;
+                                padding: 5px;
+                                box-sizing: border-box;
+                                margin-bottom: 10px;
+                            }
+                        
+                            #search-stock {
+                                background-color: #f2f2f2;
+                                color: black;
+                                border: 1px solid #ccc;
+                                border-radius: 4px;
+                                width: 100%;
+                                padding: 5px;
+                                box-sizing: border-box;
+                                margin-bottom: 10px;
+                            }
+                        </style>
+                        
+
+
+                        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+                        <!-- <script>
+                            $(document).ready(function() {
+                                // Initialize search
+                                // $('#stock-search').on('keyup', function() {
+                                // var value = $(this).val().toLowerCase();
+                                // $('#stock-checkboxes label').filter(function() {
+                                //     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                // });
+
+                                $('#source-search').on('keyup', function() {
+                                var value = $(this).val().toLowerCase();
+                                $('#source-checkboxes label').filter(function() {
+                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                });
+
+                                $('#model-search').on('keyup', function() {
+                                var value = $(this).val().toLowerCase();
+                                $('#model-checkboxes label').filter(function() {
+                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                });
+                                });
+
+                                // Initialize checkboxes
+                                $('#stock-checkboxes input[type=checkbox]').change(function() {
+                                var selected = $('#stock-checkboxes input[type=checkbox]:checked');
+                                var values = $.map(selected, function(checkbox) {
+                                    return $(checkbox).val();
+                                });
+                                console.log(values);
+                                });
+
+                                $('#source-checkboxes input[type=checkbox]').change(function() {
+                                var selected = $('#source-checkboxes input[type=checkbox]:checked');
+                                var values = $.map(selected, function(checkbox) {
+                                    return $(checkbox).val();
+                                });
+                                console.log(values);
+                                });
+
+                                $('#model-checkboxes input[type=checkbox]').change(function() {
+                                var selected = $('#model-checkboxes input[type=checkbox]:checked');
+                                var values = $.map(selected, function(checkbox) {
+                                    return $(checkbox).val();
+                                });
+                                console.log(values);
+                                });
+                            });
+                        </script> -->
+
+                        <button class="cta" id="search-stock" name="search-stock" style="width:100%">Search
+                            
+                        </button>
+                        
+                    
+
+
+                    
+                    
+
+                    
+                </div>
+                
+            </li>
+        </form>
+        <script>
+            // Get all checkboxes and form
+            var checkboxes = document.querySelectorAll('input[type="checkbox"][name="stock-name"]');
+            var form = document.querySelector('form');
+        
+            // Listen for changes
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', function() {
+                    // Count checked checkboxes
+                    var checked = document.querySelectorAll('input[type="checkbox"][name="stock-name"]:checked');
+                    if (checked.length > 3) {
+                        // More than 3 are checked, show an alert and uncheck this one
+                        alert("Due to prototype limitation, we only support 3 inputs now, apology for the inconvenience :(");
+                        this.checked = false;
+                    }
+                });
+            });
+        
+            // Listen for form submission
+            form.addEventListener('submit', function(e) {
+                // Count checked checkboxes
+                var checked = document.querySelectorAll('input[type="checkbox"][name="stock-name"]:checked');
+                if (checked.length < 3) {
+                    // Less than 3 are checked, prevent form submission and show an alert
+                    e.preventDefault();
+                    alert("You must select exactly 3 stocks. Apologies for the inconvenience :(");
+                }
+            });
+        </script>
+        <script>
+            const applymtch = document.getElementById("search-stock");
+
+            applymtch.addEventListener("click", () => {
+                const name = Array.from(document.getElementById("stock-name").selectedOptions).map(option => option.value);
+                const source = Array.from(document.getElementById("source-name").selectedOptions).map(option => option.value);
+                const model = Array.from(document.getElementById("model-name").selectedOptions).map(option => option.value);
+
+                const matches = { name, source, model };
+
+                localStorage.setItem("matches", JSON.stringify(matches));
+            });
+
+            // Retrieve the selections on page load
+            const matches = JSON.parse(localStorage.getItem("matches"));
+            if (matches) {
+                matches.category.forEach(value => document.querySelector(`#stock-name option[value='${value}']`).selected = true);
+                matches.category.forEach(value => document.querySelector(`#source-name option[value='${value}']`).selected = true);
+                matches.category.forEach(value => document.querySelector(`#model-name option[value='${value}']`).selected = true);
+            }
+        </script>
+
+            <li class="l-section section">
+                { stocks | safe}
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <li class="is-active">Home</li>
+    <li>Works</li>
+  </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='{{ url_for('static', filename='js/vendor/jquery-2.2.4.min.js') }}'><\/script>")</script>
+<script src="{{ url_for('static', filename='js/functions-min.js') }}"></script>
+</body>
+</html>
