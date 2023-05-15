@@ -227,46 +227,7 @@
                                 </label>
                                 
 
-                                <!-- <button class="cta">Predict
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                                    </g>
-                                    </svg>
-                                    <span class="btn-background"></span>
-                                </button> -->
                             </div>
-
-                            <!-- <label for="model-name" style="margin-bottom: 10px;">Models:</label>
-                            <div id="model-checkboxes" style="margin-top: 0px; margin-bottom: 10px;">
-                                
-                                    <label>
-                                        <input type="checkbox" name="model-name" value="Model 1">
-                                        Model 1
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="model-name" value="Model 2">
-                                        Model 2
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="model-name" value="Model 3">
-                                        Model 3
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="model-name" value="Model 4">
-                                        Model 4
-                                    </label> -->
-                                    
-    
-                                    <!-- <button class="cta">Predict
-                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                                        <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                                        <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                                        </g>
-                                        </svg>
-                                        <span class="btn-background"></span>
-                                    </button> -->
-                                <!-- </div> -->
                                <div>
                                 <label for="model-name-toggle" style="margin-bottom: 10px;">Customize Model:</label>
                             </div>
@@ -292,58 +253,61 @@
                                     <span id="model-4-value">2000</span><br>
                                 </div>
                                 
-
                                 <script>
-                                    var toggle = document.getElementById("model-name-toggle");
-                                    var checkboxes = document.getElementById("model-bars");
-                                    toggle.addEventListener("change", function() {
-                                        if (toggle.checked) {
-                                            checkboxes.style.display = "block";
-                                        } else {
-                                            checkboxes.style.display = "none";
-                                        }
-                                    });
+                                    window.onload = function() {
+                                        var toggle = document.getElementById("model-name-toggle");
+                                        var checkboxes = document.getElementById("model-bars");
+                                        toggle.addEventListener("change", function() {
+                                            if (toggle.checked) {
+                                                checkboxes.style.display = "block";
+                                            } else {
+                                                checkboxes.style.display = "none";
+                                            }
+                                        });
 
 
-                                    const model1Range = document.getElementById('model-1');
-                                    const model1Value = document.getElementById('model-1-value');
+                                        const model1Range = document.getElementById('model-1');
+                                        const model1Value = document.getElementById('model-1-value');
 
-                                    model1Range.addEventListener('input', function() {
-                                    model1Value.textContent = model1Range.value;
-                                    });
+                                        model1Range.addEventListener('input', function() {
+                                        model1Value.textContent = model1Range.value;
+                                        });
 
-                                    const model2Range = document.getElementById('model-2');
-                                    const model2Value = document.getElementById('model-2-value');
+                                        const model2Range = document.getElementById('model-2');
+                                        const model2Value = document.getElementById('model-2-value');
 
-                                    model2Range.addEventListener('input', function() {
-                                    model2Value.textContent = model2Range.value;
-                                    });
+                                        model2Range.addEventListener('input', function() {
+                                        model2Value.textContent = model2Range.value;
+                                        });
 
-                                    const model3Range = document.getElementById('model-3');
-                                    const model3Value = document.getElementById('model-3-value');
+                                        const model3Range = document.getElementById('model-3');
+                                        const model3Value = document.getElementById('model-3-value');
 
-                                    model3Range.addEventListener('input', function() {
-                                    model3Value.textContent = model3Range.value;
-                                    });
+                                        model3Range.addEventListener('input', function() {
+                                        model3Value.textContent = model3Range.value;
+                                        });
 
-                                    const model4Range = document.getElementById('model-4');
-                                    const model4Value = document.getElementById('model-4-value');
+                                        const model4Range = document.getElementById('model-4');
+                                        const model4Value = document.getElementById('model-4-value');
 
-                                    model4Range.addEventListener('input', function() {
-                                    model4Value.textContent = model4Range.value;
-                                    });
+                                        model4Range.addEventListener('input', function() {
+                                        model4Value.textContent = model4Range.value;
+                                        });
 
-                                    const stockCheckboxes = document.querySelectorAll('#stock-checkboxes label');
-                                    const stockSearch = document.querySelector('#stock-search');
+                                        const stockCheckboxes = document.querySelectorAll('#stock-checkboxes label');
+                                        const stockSearch = document.querySelector('#stock-search');
 
-                                    stockSearch.addEventListener('input', () => {
-                                    const searchText = stockSearch.value.toLowerCase();
-                                    stockCheckboxes.forEach((checkbox) => {
-                                        const stockName = checkbox.textContent.trim().toLowerCase();
-                                        checkbox.style.display = stockName.includes(searchText) ? 'block' : 'none';
-                                    });
-                                    });
+                                        stockSearch.addEventListener('input', () => {
+                                        const searchText = stockSearch.value.toLowerCase();
+                                        stockCheckboxes.forEach((checkbox) => {
+                                            const stockName = checkbox.textContent.trim().toLowerCase();
+                                            checkbox.style.display = stockName.includes(searchText) ? 'block' : 'none';
+                                        });
+                                        });
 
+
+
+                                    };
 
 
                                 </script>
